@@ -47,7 +47,22 @@
                     <p class="text-[#111111B3]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     <input id="input-add-money" class="w-[475px] h-14 p-[18px] border border-[
                     #1111111]  rounded-lg my-6" type="text" placeholder="Write donation amount">
-                    <button id="btn-donate-now" class="w-[475px] h-13 p-[10px] bg-[#B4F461] rounded-lg -my-4 text-xl font-semibold ">Donate Now</button>
+                    <!-- <button id="btn-donate-now" class="w-[475px] h-13 p-[10px] bg-[#B4F461] rounded-lg -my-4 text-xl font-semibold ">Donate Now</button> -->
+                    <!-- model section -->
+                     <!-- You can open the modal using ID.showModal() method -->
+                <button id="btn-donate-now" class="w-[475px] h-13 p-[10px] bg-[#B4F461] rounded-lg -my-4 text-xl font-semibold " onclick="my_modal_4.showModal()">Donate Now</button>
+                <dialog id="my_modal_4" class="modal">
+                <div class="modal-box w-11/12 max-w-5xl">
+                    <h3 class=" font-bold text-3xl">Congratulation!</h3>
+                    <p class="py-4 text-2xl">Your Donation is successful. Keep up good work . </p>
+                    <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button, it will close the modal -->
+                        <button class="btn">OK </button>
+                    </form>
+                    </div>
+                </div>
+                </dialog>
                 </div>
              </div>
              <!-- card end -->
@@ -97,7 +112,7 @@
              </div>
         </section>
         <!-- history pary -->
-        <section id="history-section " class="hidden">
+        <section id="history-section" class="hidden mt-52">
            
         </section>
     </main>
