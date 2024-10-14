@@ -9,7 +9,7 @@
     <a href="home.html"></a>
 </head>
 <body>
-    <header>
+    <header class="fixed top-0 w-full left-0 ">
         <nav class="flex justify-between bg-[#F9F7F3] h-24 ">
             <button class="w-24 rounded-lg h-10 font-bold text-sm ml-16 mt-7 bg-[#B4F461]"><a href="home.html">Home</a></button>
             <div class="flex w-10 h-10 mt-7">
@@ -33,21 +33,24 @@
             <h3 class="text-3xl font-bold ">Important FAQ</h3>
             
         </div>
-        <div class="ml-16 border h-20 w-3/4 ">
-            <h2 class="font-semibold text-xl">What is the document object model (DOM)?</h2>
-            <input type="text" class="w-3/4" placeholder="Write your answer here">
+        <div class="ml-16 border h-32 w-3/4 ">
+            <h2 class="font-semibold text-xl mt-2">What is the document object model (DOM)?</h2>
+            <p class="text-[#111111B3] mt-4">ANS: The Document Object Model (DOM) is a programming interface that represents the structure of an HTML or XML document as a tree of objects, allowing programs to dynamically access, modify, and manipulate the document's content, structure, and style.</p>
         </div>
-        <div class="ml-16 border  h-20 w-3/4">
+        <div class="ml-16 border  h-32 w-3/4">
             <h2 class="font-semibold text-xl">How do you select an element from DOM?</h2>
-            <input type="text" placeholder="Write your answer here">
+            <p class="text-[#111111B3] mt-4">
+                ANS: To select an element from the DOM, I can use JavaScript methods like document.getElementById() to select by ID, document.querySelector() to select the first element that matches a CSS selector, or other methods like document.getElementsByClassName() and document.getElementsByTagName() for selecting by class or tag name.</p>
         </div>
-        <div class="ml-16 border h-20 w-3/4">
+        <div class="ml-16 border h-32 w-3/4">
             <h2 class="font-semibold text-xl">What is event delegation in the context of the DOM, and why it is useful?</h2>
-            <input type="text" placeholder="Write your answer here">
+            <p class="text-[#111111B3] mt-4">
+                ANS: Event delegation is a technique in the DOM where a single event listener is attached to a parent element to manage events on its child elements. Instead of adding individual listeners to each child, the event is captured and handled by the parent, taking advantage of event bubbling. This is useful for improving performance and managing dynamic elements added to the DOM.</p>
         </div>
-        <div class="ml-16 h-20 border w-3/4">
+        <div class="ml-16 h-32 border w-3/4">
             <h2 class="font-semibold text-xl">How do you manipulate an element's attributes and style using the DOM?</h2>
-            <input type="text" placeholder="Write your answer here">
+            <p class="text-[#111111B3] mt-4">
+                ANS: I can manipulate an element's attributes and style using the DOM by accessing the element via methods like document.getElementById() or document.querySelector(). To change attributes, use methods like setAttribute() or directly modify properties like element.src or element.href. To modify styles, use the style property (e.g., element.style.color = "red").</p>
         </div>
     </main>
 </body>
