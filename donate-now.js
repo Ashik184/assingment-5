@@ -39,10 +39,10 @@ document.getElementById('btn-donate-now')
         
         const noakhali = document.getElementById('noakhali-balance').innerText;
 
-        if(isNaN(noakhali)){
+        if(isNaN(addMoney) || parseFloat(addMoney)<0){
             alert("invalid number");
         }
-        const modal = document.getElementById('my_modal_1');
+       else{ const modal = document.getElementById('my_modal_1');
         modal.showModal();
 
         const totalBalance = parseFloat(addMoney) + parseFloat(noakhali); 
@@ -57,13 +57,25 @@ document.getElementById('btn-donate-now')
         document.getElementById('account-balance').innerText = totalAmount;
         
         // history section 
-        const p = document.createElement('p');
-        p.innerText = `${addMoney} Taka is  Donate for Flood at Noakhali, Bangladesh`;
+        // const p = document.createElement('p');
+        // p.innerText = `${addMoney} Taka is  Donate for Flood at Noakhali, Bangladesh`;
        
+        const history=document.createElement('div');
+        const bdTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka', hour12: true });
+        history.innerHTML=` <div class="w-[400px] lg:w-[1024px] mx-auto p-6 bg-white border border-[#1111111A] rounded-lg   items-center space-x-4 mb-6">
+            
+              <p class="text-black font-normal text-lg"><span class="noakhali-tk"></span> taka Donate for Flood at Noakhali, Bangladesh</p> <br>
+                  <p class="text-black font-normal text-lg">Time: ${bdTime}</p> 
+    
+            </div>` ;
+            document.getElementById('history-section').appendChild(history);
+            const noakhaliTk=history.querySelector('.noakhali-tk');
+            noakhaliTk.innerText=addMoney;
+
 
         // should be a common function
         document.getElementById('history-section').appendChild(p);
-
+       }
     })
 
 
@@ -77,10 +89,11 @@ document.getElementById('btn-donate-now')
         
         const feni = document.getElementById('feni-balance').innerText;
 
-        if(isNaN(feni)){
+        if(isNaN(addMoney) || parseFloat(addMoney)<0){
             alert("invalid number");
         }
-        const modal = document.getElementById('my_modal_1');
+        else{
+            const modal = document.getElementById('my_modal_1');
         modal.showModal();
 
         const totalBalance = parseFloat(addMoney) + parseFloat(feni); 
@@ -95,13 +108,25 @@ document.getElementById('btn-donate-now')
         document.getElementById('account-balance').innerText = totalAmount;
         
         // history section 
-        const p = document.createElement('p');
-        p.innerText = `${addMoney} Donate for Flood Relief in Feni,Bangladesh`;
+        // const p = document.createElement('p');
+        // p.innerText = `${addMoney} Donate for Flood Relief in Feni,Bangladesh`;
        
+        const history=document.createElement('div');
+        const bdTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka', hour12: true });
+        history.innerHTML=` <div class="w-[400px] lg:w-[1024px] mx-auto p-6 bg-white border border-[#1111111A] rounded-lg   items-center space-x-4 mb-6">
+            
+              <p class="text-black font-normal text-lg"><span class="feni-tk"></span> taka Donate for Flood Relief in Feni,Bangladesh</p> <br>
+                  <p class="text-black font-normal text-lg">Time: ${bdTime}</p> 
+    
+            </div>` ;
+            document.getElementById('history-section').appendChild(history);
+            const feniTk=history.querySelector('.feni-tk');
+        feniTk.innerText=addMoney;
+
 
         // should be a common function
         document.getElementById('history-section').appendChild(p);
-
+        }
     })    
 
 
@@ -118,11 +143,12 @@ document.getElementById('btn-donate-now')
         modal.showModal();
 
 
-        if(isNaN(qouta)){
+        if(isNaN(addMoney) || parseFloat(addMoney)<0){
             alert("invalid number");
         }
         
-        const totalBalance = parseFloat(addMoney) + parseFloat(qouta); 
+        else{
+            const totalBalance = parseFloat(addMoney) + parseFloat(qouta); 
         
         document.getElementById('qouta-balance').innerText = totalBalance;
 
@@ -150,6 +176,6 @@ document.getElementById('btn-donate-now')
 
         // should be a common function
         document.getElementById('history-section').appendChild(p);
-
+        }
 
     })
