@@ -42,7 +42,7 @@ document.getElementById('btn-donate-now')
         if(isNaN(noakhali)){
             alert("invalid number");
         }
-        const modal = document.getElementById('my_modal_10');
+        const modal = document.getElementById('my_modal_1');
         modal.showModal();
 
         const totalBalance = parseFloat(addMoney) + parseFloat(noakhali); 
@@ -80,7 +80,7 @@ document.getElementById('btn-donate-now')
         if(isNaN(feni)){
             alert("invalid number");
         }
-        const modal = document.getElementById('my_modal_10');
+        const modal = document.getElementById('my_modal_1');
         modal.showModal();
 
         const totalBalance = parseFloat(addMoney) + parseFloat(feni); 
@@ -114,7 +114,7 @@ document.getElementById('btn-donate-now')
         
         const qouta = document.getElementById('qouta-balance').innerText;
 
-        const modal = document.getElementById('my_modal_10');
+        const modal = document.getElementById('my_modal_1');
         modal.showModal();
 
 
@@ -134,11 +134,22 @@ document.getElementById('btn-donate-now')
         document.getElementById('account-balance').innerText = totalAmount;
         
         // history section 
-        const p = document.createElement('p');
-        p.innerText = `${addMoney} Aid for Injured in the Quota Movement`;
-       
+        // const p = document.createElement('p');
+        // p.innerText = `${addMoney} Aid for Injured in the Quota Movement`;
+        const history=document.createElement('div');
+        const bdTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka', hour12: true });
+        history.innerHTML=` <div class="w-[400px] lg:w-[1024px] mx-auto p-6 bg-white border border-[#1111111A] rounded-lg   items-center space-x-4 mb-6">
+            
+              <p class="text-black font-normal text-lg"><span class="quota-tk"></span> Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p> <br>
+                  <p class="text-black font-normal text-lg">Time: ${bdTime}</p> 
+    
+            </div>` ;
+            document.getElementById('history-section').appendChild(history);
+            const quotaTk=history.querySelector('.quota-tk');
+        quotaTk.innerText=addMoney;
 
         // should be a common function
         document.getElementById('history-section').appendChild(p);
+
 
     })
